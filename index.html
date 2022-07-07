@@ -89,6 +89,19 @@
             justify-content: center;
             align-items: center;
         }
+        
+        #me {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(255, 255, 255, .7);
+            border-radius: 10px;
+        }
+        
+        #me a {
+            text-decoration: none;
+            cursor: pointer;
+        }
     </style>
     <title>خوش آمدید</title>
 </head>
@@ -97,16 +110,15 @@
     <ul id="main-list"></ul>
     <footer id="me">
 
-
+        <a onclick="openinBrowser('https://github.com/Shayansimaei/warzone-dns-changer/tree/master')">
+            <img src="icons8-github-50.png" alt="">
+        </a>
+        <a onclick="openinBrowser('https://t.me/itsYourChoicee')">
+            <img src="icons8-telegram-app-48.png" alt="">
+        </a>
     </footer>
 </body>
 <script src="./dnsChanger.js">
 </script>
-<a href="">
-    <img src="icons8-github-50.png" alt="">
-</a>
-<a href="">
-    <img src="icons8-telegram-app-48.png" alt="">
-</a>
 
 </html>

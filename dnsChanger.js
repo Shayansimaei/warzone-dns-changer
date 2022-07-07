@@ -1,5 +1,7 @@
 window.$ = require("jquery");
 const dns_changer = require('node_dns_changer');
+const { shell } = require('electron');
+
 var DisabledColor = "#EAF6F6";
 var EnabledColor = "#EB1D36";
 const changeDns = async(dns, name) => {
@@ -73,5 +75,9 @@ async function makeApp() {
 
 
     }
+}
+
+function openinBrowser(link) {
+    shell.openExternal(link)
 }
 makeApp();
