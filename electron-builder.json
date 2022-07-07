@@ -2,9 +2,9 @@
     "name": "Warzone DNS Chancher",
     "version": "0.0.1",
     "license": "MIT",
-    "description": "your app description",
-    "author": "xyz <xyz@gmail.com>",
-    "main": "./app/index.js",
+    "description": "Warzone DNS Chancher",
+    "author": "shayan simaei <shayan78simaei@gmail.com>",
+    "main": "main.js",
     "scripts": {
         "postinstall": "install-app-deps",
         "start": "npm install && electron ./app",
@@ -12,7 +12,7 @@
         "dist": "build"
     },
     "build": {
-        "appId": "yourappid",
+        "appId": "WarzoneDNSChancher",
         "category": "your.app.category.type",
         "dmg": {
             "contents": [{
@@ -34,8 +34,8 @@
             ]
         },
         "win": {
-            "target": "squirrel",
-            "icon": "build/icon.ico",
+            "target": "asar",
+            "icon": "icon.ico",
             "requestedExecutionLevel": "requireAdministrator"
 
         }
