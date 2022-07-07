@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="icon.ico">
+    <base href="./">
+    <style>
+        @font-face {
+            font-family: shabName;
+            src: url('resources/samim-font-v2.0.1/Samim-Bold.eot');
+            src: url('resources/samim-font-v2.0.1/Samim-Bold.eot') format('FontName-opentype'), url('resources/samim-font-v2.0.1/Samim-Bold.woff') format('woff'), url('resources/samim-font-v2.0.1/Samim-Bold.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        body {
+            font-family: shabName;
+            margin: 0;
+            padding: 0;
+            background: url(resources/WZ_Hero_Mobile_En.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        
+         ::-webkit-scrollbar {
+            width: 0px;
+        }
+        
+        #main-list {
+            padding: 30px;
+            margin: 0;
+            backdrop-filter: blur(3px);
+            color: #EAF6F6;
+        }
+        
+        #main-list li {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        #main-list li:hover {
+            transition: all .5s;
+            cursor: pointer;
+            background-color: rgba(58, 56, 69, .7);
+            width: 120%;
+            position: relative;
+            left: 10%;
+            border-radius: 10px;
+        }
+        
+        #main-list li::after {
+            content: "";
+            width: 200px;
+            margin: auto;
+            height: 1px;
+            background-color: #EAF6F6;
+        }
+        
+        #main-list li div {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        
+        #main-list li div p:last-child {
+            margin-right: 15px;
+        }
+        
+        .selected {
+            transition: all .5s;
+            cursor: pointer;
+            background-color: rgba(58, 56, 69, .7);
+            width: 120%;
+            position: relative;
+            left: 10%;
+            border-radius: 10px;
+            color: #53BF9D;
+        }
+        
+        .for-select {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        #me {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(255, 255, 255, .7);
+            border-radius: 10px;
+        }
+        
+        #me a {
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+    <title>خوش آمدید</title>
+</head>
+
+<body>
+    <ul id="main-list"></ul>
+    <footer id="me">
+
+        <a onclick="openinBrowser('https://github.com/Shayansimaei/warzone-dns-changer/tree/master')">
+            <img src="resources/icons8-github-50.png" alt="">
+        </a>
+        <a onclick="openinBrowser('https://t.me/itsYourChoicee')">
+            <img src="resources/icons8-telegram-app-48.png" alt="">
+        </a>
+    </footer>
+</body>
+<script src="./dnsChanger.js">
+</script>
+
+</html>
