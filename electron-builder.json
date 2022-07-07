@@ -1,48 +1,53 @@
 {
-    "name": "Warzone DNS Chancher",
-    "version": "0.0.1",
-    "license": "MIT",
-    "description": "Warzone DNS Chancher",
-    "author": "shayan simaei <shayan78simaei@gmail.com>",
-    "main": "main.js",
-    "scripts": {
-        "postinstall": "install-app-deps",
-        "start": "npm install && electron ./app",
-        "pack": "build --dir",
-        "dist": "build"
+    "appId": "com.warzonednschanger.fileio",
+    "productName": "Warzone DNS Changer",
+    "copyright": ".",
+    "directories": {
+        "app": ".",
+        "output": "out",
+        "buildResources": "build-res"
     },
-    "build": {
-        "appId": "WarzoneDNSChancher",
-        "category": "your.app.category.type",
-        "dmg": {
-            "contents": [{
-                    "x": 110,
-                    "y": 150
-                },
-                {
-                    "x": 240,
-                    "y": 150,
-                    "type": "link",
-                    "path": "/Applications"
-                }
-            ]
+    "files": [
+        "package.json",
+        "app/**/*",
+        "node_modules"
+    ],
+    "dmg": {
+        "background": null,
+        "backgroundColor": "#ffffff",
+        "window": {
+            "width": "300",
+            "height": "600"
         },
-        "linux": {
-            "target": [
-                "AppImage",
-                "deb"
-            ]
-        },
-        "win": {
-            "target": "asar",
-            "icon": "icon.ico",
-            "requestedExecutionLevel": "requireAdministrator"
+        "contents": [{
+                "x": 100,
+                "y": 100
+            },
+            {
+                "x": 300,
+                "y": 100,
+                "type": "link",
+                "path": "/Applications"
+            }
+        ]
+    },
+    "mac": {
+        "target": "dmg",
+        "category": "public.app-category.utilities"
+    },
+    "win": {
+        "target": "nsis",
+        "icon": "app/resources/icon.ico",
+        "requestedExecutionLevel": "requireAdministrator"
 
-        }
     },
-    "dependencies": {},
-    "devDependencies": {
-        "electron": "latest",
-        "electron-builder": "latest"
+    "nsis": {
+        "installerIcon": "app/resources/icon.ico",
+        "installerHeaderIcon": "app/resources/icon.ico",
+        "deleteAppDataOnUninstall": true
+    },
+    "linux": {
+        "target": "AppImage",
+        "category": "Utility"
     }
 }
