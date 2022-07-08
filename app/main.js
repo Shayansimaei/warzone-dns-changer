@@ -10,28 +10,24 @@ const createWindow = () => {
             contextIsolation: false,
         },
         autoHideMenuBar: true,
-
-
     });
 
     win.resizable = false;
     win.on('minimize', function(event) {
-        event.preventDefault();
-        win.hide();
+        // event.preventDefault();
+        // win.hide();
     });
 
     win.on('close', function(event) {
-        if (!win.isQuiting) {
-            event.preventDefault();
-            win.hide();
-        }
+        // if (!win.isQuiting) {
+        //      event.preventDefault();
+        //      win.hide();
+        // }
 
         return false;
     });
     win.loadFile(__dirname + '/index.html');
-    win.webContents.on('did-finish-load', () => {
-
-    });
+    win.webContents.on('did-finish-load', () => {});
 };
 
 app.whenReady().then(async() => {
